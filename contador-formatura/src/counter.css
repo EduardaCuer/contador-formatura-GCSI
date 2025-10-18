@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/* Fundo com gradiente animado de cor */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #001f3f, #003366, #004080, #002244);
+  background-size: 600% 600%;
+  animation: backgroundMove 15s ease infinite;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+@keyframes backgroundMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.app {
+  padding: 50px 20px;
+  animation: fadeIn 1.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Chapéu grande no topo */
+.big-hat {
+  width: 150px;
+  height:  auto;
+  margin: 0 auto 30px;
+  display: block;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.hats {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hat {
+  position: absolute;
+  width: 40px;
+  animation: float 10s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-200px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Restante do CSS igual ao anterior */
+header h1 {
+  font-size: 2.2rem;
+  color: #fff;
+  z-index: 1;
+  position: relative;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #aad4ff;
+  margin-bottom: 40px;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+.time-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px 30px;
+  min-width: 120px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.time-box:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.time-box span {
+  font-size: 2.3rem;
+  font-weight: bold;
+  display: block;
+  color: #fff;
+}
+
+.time-box p {
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+.after {
+  margin-top: 60px;
+  z-index: 1;
+  position: relative;
+}
+
+.after h2 {
+  color: #ffd700;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+.after p {
+  color: #fff;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+.gallery {
+  margin-top: 70px;
+  z-index: 1;
+  position: relative;
+}
+
+.gallery h2 {
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+.photos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.photos img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s;
+}
+
+.photos img:hover {
+  transform: scale(1.08);
+}
+
+footer {
+  margin-top: 60px;
+  font-size: 0.9rem;
+  color: #aad4ff;
+  z-index: 1;
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
